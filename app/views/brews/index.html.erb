@@ -1,2 +1,12 @@
-<h1>Brews#index</h1>
-<p>Find me in app/views/brews/index.html.erb</p>
+<h1>All the Brews, fool!</h1>
+<% @brews.each do |brew| %>
+  <h3>Name: <%= brew["name"] %></h3>
+  <p>Style: <%= brew["style"] %></p>
+  <p>Hop: <%= brew["hop"] %></p>
+  <p>Yeast: <%= brew["yeast"] %></p>
+  <p>Malts: <%= brew["malts"] %></p>
+  <p>IBU: <%= brew["ibu"] %></p>
+  <p>Alcohol: <%= brew["alcohol"] %></p>
+  <p>BLG: <%= brew["blg"] %></p>
+  <a href="/brews/<%= brew["id"] %>">More Info</a>
+<% end %>
