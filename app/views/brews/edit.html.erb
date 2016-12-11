@@ -1,0 +1,36 @@
+<h1>Edit Brew!</h1>
+<%= form_tag "/brews/#{@brew['id']}", method: :patch do %>
+  <div>
+    <%= label_tag :name %>
+    <%= text_field_tag :name, @brew["name"] %>
+  </div>
+  <div>
+    <%= label_tag :style %>
+    <%= text_field_tag :style, @brew["style"] %>
+  </div>
+  <div>
+    <%= label_tag :hop %>
+    <%= text_field_tag :hop, @brew["hop"] %>
+  </div>
+  <div>
+    <%= label_tag :yeast %>
+    <%= text_field_tag :yeast, @brew["yeast"] %>
+  </div>
+  <div>
+    <%= label_tag :malts %>
+    <%= text_field_tag :malts, @brew["malts"] %>
+  </div>
+  <div>
+    <%= label_tag :ibu %>
+    <%= text_field_tag :ibu, @brew["ibu"] %>
+  </div>
+  <div>
+    <%= label_tag :alcohol %>
+    <%= text_field_tag :alcohol, @brew["alcohol"] %>
+  </div>
+  <div>
+    <%= label_tag :blg %>
+    <%= text_field_tag :blg, @brew["blg"] %>
+  </div>
+  <%= submit_tag "Update Brew" %>
+<% end %>

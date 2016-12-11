@@ -36,7 +36,8 @@ class BrewsController < ApplicationController
   end
 
   def destroy
-    
+    message = Unirest.delete("http://localhost:3000/api/v1/brews/#{params[:id]}").body
+    redirect_to "/brews"
   end
 
 end

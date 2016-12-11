@@ -7,6 +7,7 @@
 <p>IBU: <%= @brew["ibu"] %></p>
 <p>Alcohol: <%= @brew["alcohol"] %></p>
 <p>BLG: <%= @brew["blg"] %></p>
+<%= link_to "Destroy Brew", "/brews/#{@brew['id']}", method: :delete %>
 
 <div>
   <a href="/brews">Back to All Brews</a>
